@@ -9,7 +9,7 @@ export const LoginUser = async(email, password)=>{
     const response = await axios.get('http://localhost:4000/users');
     const users = response.data;
 
-    const user = users.find(user => user.email === email && user.password === password);
+    const user = users.find(user => user.email.toLowerCase() === email.toLowerCase() && user.password === password);
 
     if (user) {
         return { success: true, data: user }; 
