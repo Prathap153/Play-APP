@@ -1,0 +1,29 @@
+/* SearchByCity.css */
+
+label {
+    font-weight: bold; /* Make text bold */
+    color: black; /* Set text color to black */
+    margin-right: 10px; /* Space to the right of labels */
+}
+
+select {
+    margin-bottom: 20px; /* Space below the dropdowns */
+    padding: 8px; /* Padding inside the dropdown */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+}
+.sports-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between the grid items */
+    justify-content: space-evenly;
+}
+
+.sport-card {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

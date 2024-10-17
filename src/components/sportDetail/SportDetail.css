@@ -1,0 +1,79 @@
+.sport-detail-container {
+    padding: 20px;
+}
+
+.detail-flex-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.image-container {
+    flex: 1;
+    position: relative; /* For absolute positioning of nav buttons */
+    width: 70%; /* Full width of parent */
+    max-width: 400px; /* Limit maximum width */
+    height: 300px; /* Fixed height for the image box */
+    overflow: hidden; /* Hide overflow if the image is too large */
+    border: 1px solid #ddd; /* Optional border for the box */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure image fits within the box */
+    object-fit: cover; /* Cover the entire area without distortion */
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    border: none; /* Remove border */
+    z-index: 1; /* Ensure buttons are above the image */
+}
+
+.nav-button:first-of-type {
+    left: 10px; /* Position left */
+}
+
+.nav-button:last-of-type {
+    right: 10px; /* Position right */
+}
+
+.details-container {
+    flex: 2;
+    padding-left: 20px; /* Space between image and details */
+}
+
+.details-container h2 {
+    margin-top: 0;
+}
+
+.selection-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 5px; /* Space between rows */
+}
+
+.date-selection, .time-selection {
+    display: flex;
+    align-items: center; 
+}
+
+.date-selection label, .time-selection label {
+    margin-right: 10px; 
+}
+
+button {
+    margin-right: 10px;
+}
+
+

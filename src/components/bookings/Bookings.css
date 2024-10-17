@@ -1,0 +1,51 @@
+.bookings-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.booking-card {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sport-image {
+    width: 140px; /* Set a fixed width */
+    height: 110px; /* Maintain aspect ratio */
+    margin-right: 50px; /* Space between image and details */
+    border-radius: 5px; /* Optional: round corners */
+}
+
+.booking-details {
+    flex: 1; /* Allow details to take the remaining space */
+}
+
+@media (max-width: 480px) {
+    .booking-card {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .sport-image {
+        width: 100%; /* Use full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add some space below the image */
+    }
+
+    .booking-details {
+        text-align: left; /* Align text to the left */
+    }
+
+    .bookings-container {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}

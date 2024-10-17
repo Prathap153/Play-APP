@@ -1,0 +1,147 @@
+.navbar-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    background-color: grey; /* Navbar background color */
+    color: white; /* Text color */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.app-name {
+    font-size: 1.5em; /* Larger font for the app name */
+    margin-right: 10px;
+}
+
+.search-form {
+    display: flex; /* Flexbox for form elements */
+    align-items: center; /* Center form items vertically */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.search-input {
+    padding: 8px; /* Padding inside input */
+    margin-right: 10px; /* Space between input and button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.search-button {
+    padding: 8px 12px; /* Padding for button */
+    background-color: #fff; /* Button color */
+    color: #007bff; /* Text color for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-right:550px;
+}
+
+.search-button:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.user-links {
+    display: flex; /* Flexbox for user links */
+    align-items: center; /* Center items vertically */
+    flex: 1; /* Allow user links to take available space */
+    justify-content: flex-end; /* Align user links to the right */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adjust spacing between links */
+    margin-left: auto; /* Automatically adjust margin */
+}
+
+.logged-in {
+    display: flex;
+    align-items: center;
+}
+
+.logged-user {
+    margin: 10px 20px; /* Space between welcome text and logout button */
+    font-weight: bold; /* Make the username bold */
+}
+
+.nav-link-signup {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 20px 20px;
+}
+
+.nav-link-login {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.logout-button {
+    background-color: transparent; /* Transparent background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.logout-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.Booking-Details {
+    color: white;
+    font-weight: bold;
+}
+
+.home {
+    color: white;
+    text-decoration: none
+}
+
+.bookings {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 480px) {
+    .navbar-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text */
+    }
+
+    .app-name {
+        margin: 10px 0; /* Adjust margin for mobile */
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    .search-form {
+        width: 100%; /* Full width for search form */
+        margin: 10px 0; /* Adjust margin for mobile */
+    }
+
+    .search-input {
+        width: 80%; /* Full width for input, leave some space */
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add space below */
+    }
+
+    .search-button {
+        width: 80%; /* Button width to match input */
+        margin-bottom: 10px; /* Space below button */
+    }
+
+    .user-links {
+        width: 100%; /* Full width for user links */
+        justify-content: center; /* Center user links */
+        margin-top: 10px; /* Add margin on top */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Adjust gap between links */
+        margin: 10px 0; /* Space around links */
+        width: 100%; /* Full width for links */
+        align-items: center; /* Center align links */
+    }
+
+    .logged-user {
+        margin: 10px 0; /* Adjust margin for mobile */
+    }
+}
