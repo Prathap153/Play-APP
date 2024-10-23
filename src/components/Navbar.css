@@ -15,6 +15,7 @@
     display: flex; /* Flexbox for form elements */
     align-items: center; /* Center form items vertically */
     margin: 10px 0; /* Margin for spacing */
+    flex-grow: 1; /* Allow search form to grow */
 }
 
 .search-input {
@@ -31,13 +32,9 @@
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor */
-    margin-right:550px;
 }
 
-.search-button:hover {
-    background-color: #e0e0e0; /* Change background on hover */
-}
-
+/* Responsive adjustments for mobile view */
 .user-links {
     display: flex; /* Flexbox for user links */
     align-items: center; /* Center items vertically */
@@ -61,15 +58,13 @@
     font-weight: bold; /* Make the username bold */
 }
 
-.nav-link-signup {
+.nav-link-signup,
+.nav-link-login,
+.home,
+.bookings {
     color: white; /* Link color */
     text-decoration: none; /* Remove underline */
-    margin: 20px 20px;
-}
-
-.nav-link-login {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
+    margin: 20px; /* Consistent margin */
 }
 
 .logout-button {
@@ -88,60 +83,52 @@
     font-weight: bold;
 }
 
-.home {
-    color: white;
-    text-decoration: none
-}
-
-.bookings {
-    color: white;
-    text-decoration: none;
-}
-
 /* Media Query for Mobile View */
-@media (max-width: 480px) {
+@media all and (max-width: 500px) {
     .navbar-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        text-align: center; /* Center text */
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items horizontally */
+        padding: 10px; /* Add padding to the navbar */
     }
 
     .app-name {
-        margin: 10px 0; /* Adjust margin for mobile */
-        font-size: 1.2em; /* Adjust font size for mobile */
+        font-size: 1.2em; /* Adjust font size for readability */
+        margin: 10px 0; /* Space above and below app name */
+        text-align: center; /* Center text within the navbar */
     }
 
     .search-form {
-        width: 100%; /* Full width for search form */
-        margin: 10px 0; /* Adjust margin for mobile */
+        width: 90%; /* Full width for search form */
+        justify-content: center; /* Center search form items */
+        margin-bottom: 10px; /* Space below the search form */
     }
 
     .search-input {
-        width: 80%; /* Full width for input, leave some space */
-        margin-right: 0; /* Remove margin */
-        margin-bottom: 10px; /* Add space below */
+        width: 70%; /* Adjust input width */
+        margin-right: 5px; /* Space between input and button */
     }
 
     .search-button {
-        width: 80%; /* Button width to match input */
-        margin-bottom: 10px; /* Space below button */
+        margin-right: 0; /* Reset margin */
     }
 
     .user-links {
-        width: 100%; /* Full width for user links */
-        justify-content: center; /* Center user links */
-        margin-top: 10px; /* Add margin on top */
+        justify-content: center; /* Center user links on mobile */
+        margin-top: -40px; /* Space above user links */
+        margin-right: 270px;
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 10px; /* Adjust gap between links */
-        margin: 10px 0; /* Space around links */
-        width: 100%; /* Full width for links */
-        align-items: center; /* Center align links */
+        justify-content: center; /* Center navigation links */
+        margin-top: 10px; /* Space above links */
+        gap: 10px; /* Adjust spacing between links */
     }
 
-    .logged-user {
-        margin: 10px 0; /* Adjust margin for mobile */
+    .nav-link-signup,
+    .nav-link-login,
+    .home,
+    .bookings {
+        margin: 10px; /* Consistent margin for links */
     }
 }
+

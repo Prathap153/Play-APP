@@ -80,3 +80,44 @@ body {
     font-size: 16px; /* Size for error message */
     text-align: center; /* Centered text */
 }
+
+
+@media all and (max-width: 500px) {
+    .payment-container {
+        padding: 10px; /* Add padding around the container */
+    }
+
+    .payment-details {
+        padding: 20px; /* Reduce padding inside the box */
+        max-width: 100%; /* Allow full width on small screens */
+    }
+
+    .payment-title {
+        font-size: 20px; /* Smaller font size for title */
+    }
+
+    .sport-name {
+        font-size: 18px; /* Slightly smaller font for sport name */
+    }
+
+    .detail {
+        font-size: 14px; /* Smaller font size for details */
+    }
+
+    .total-amount {
+        font-size: 16px; /* Adjust total amount font size */
+    }
+
+    .back-button, .pay-button {
+        width: 30%; /* Make buttons full width */
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+
+    .back-button {
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    .no-details {
+        font-size: 14px; /* Smaller size for error message */
+    }
+}

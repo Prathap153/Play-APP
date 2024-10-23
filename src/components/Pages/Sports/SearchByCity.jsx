@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FetchSports } from "../../apis/ApiServices";
+import { FetchSports } from "../../../apis/ApiServices";
 import { useParams, Link } from "react-router-dom";
 import './SearchByCity.css';
 
@@ -7,9 +7,8 @@ const SearchByCity = () => {
     const { city } = useParams();
     const [searchCity, setSearchCity] = useState([]);
     const [selectedSport, setSelectedSport] = useState("All");
-    const [selectedArea, setSelectedArea] = useState("All");
+    const [areaInput, setAreaInput] = useState(""); // State for area input
     const [sportsOptions, setSportsOptions] = useState([]);
-    const [areaOptions, setAreaOptions] = useState([]);
 
     useEffect(() => {
         searchBy(city);
@@ -25,13 +24,9 @@ const SearchByCity = () => {
             const uniqueSports = [...new Set(foundByCity.map(s => s.type))];
             setSportsOptions(uniqueSports);
 
-            // Extract unique areas based on filtered sports
-            const uniqueAreas = [...new Set(foundByCity.map(s => s.location))];
-            setAreaOptions(uniqueAreas);
-
-            // Reset selection
+            // Reset selections
             setSelectedSport("All");
-            setSelectedArea("All");
+            setAreaInput(""); // Reset area input
         } catch (error) {
             console.log("Error fetching sport details:", error);
         }
@@ -39,36 +34,31 @@ const SearchByCity = () => {
 
     const handleSportChange = (event) => {
         setSelectedSport(event.target.value);
-        // Reset area selection when sport changes
-        setSelectedArea("All");
-    };
-
-    const handleAreaChange = (event) => {
-        setSelectedArea(event.target.value);
     };
 
     const filteredSports = searchCity.filter((sport) => {
         const sportMatch = (selectedSport === "All" || sport.type === selectedSport);
-        const areaMatch = (selectedArea === "All" || sport.location === selectedArea);
+        const areaMatch = areaInput === "" || sport.location.toLowerCase().includes(areaInput.toLowerCase());
         return sportMatch && areaMatch;
     });
 
     return (
         <div>
             <h2>Available Games in {city}</h2>
-            <label htmlFor="sport-filter">Filter by Sport: </label>
-            <select id="sport-filter" value={selectedSport} onChange={handleSportChange}>
+            <label htmlFor="area-input">Search by Area:</label>
+            <input 
+                id="area-input"
+                className="search-input-area"
+                type="text" 
+                value={areaInput} 
+                onChange={(e) => setAreaInput(e.target.value)} 
+                placeholder="Search by area" 
+            />
+            <label htmlFor="sport-filter" className="filter-sport">Filter by Sport:</label>
+            <select id="sport-filter" value={selectedSport} onChange={handleSportChange} className="select-sport">
                 <option value="All">All</option>
                 {sportsOptions.map((sport) => (
                     <option key={sport} value={sport}>{sport}</option>
-                ))}
-            </select>
-
-            <label htmlFor="area-filter">Filter by Area:</label>
-            <select id="area-filter" value={selectedArea} onChange={handleAreaChange}>
-                <option value="All">All</option>
-                {areaOptions.map((area) => (
-                    <option key={area} value={area}>{area}</option>
                 ))}
             </select>
 
@@ -86,7 +76,7 @@ const SearchByCity = () => {
                         ))}
                     </div>
                 ) : (
-                    <h2> we will arrive soon to our {city}</h2>
+                    <h2>We will arrive soon to our {city}</h2>
                 )}
             </div>
         </div>

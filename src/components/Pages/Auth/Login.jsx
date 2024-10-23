@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LoginUser } from '../../apis/ApiServices';
-import { useUser } from '../UserContext'; 
+import { LoginUser } from '../../../apis/ApiServices';
+import { useUser } from '../../UserContext'; 
 import './Login.css';
 
 const Login = () => {
@@ -13,16 +13,17 @@ const Login = () => {
     });
     const [error, setError] = useState('');
 
-    const handleChange = (event) => {
+    const handleChange = useCallback((event) => {
         const { name, value } = event.target;
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
         }));
         setError(''); // Clear error when user types
-    };
+    }, []);
 
-    const handleSubmit = async (event) => {
+
+    const handleSubmit = useCallback(async (event) => {
         event.preventDefault();
         const { email, password } = formData;
 
@@ -40,7 +41,7 @@ const Login = () => {
             setError('An error occurred. Please try again.');
             console.error('Login error:', err);
         }
-    };
+    }, [formData, setUser, navigate]); 
 
     return (
         <div className="login-container">

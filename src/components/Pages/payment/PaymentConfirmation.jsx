@@ -9,7 +9,6 @@ const PaymentConfirmation = () => {
     
 
     useEffect(() => {
-        
         const timer = setTimeout(() => {
             setLoading(false);
         }, 2000); 

@@ -17,6 +17,12 @@
       "email": "PR@gmail.com",
       "password": "PR12345678",
       "name": "PR"
+    },
+    {
+      "id": "c941",
+      "email": "PR@gmail.com",
+      "password": "0987654",
+      "name": "PR"
     }
   ],
   "bookings": [
@@ -83,6 +89,32 @@
         "images": "https://media.istockphoto.com/id/1167866941/photo/cricket-pitch-sport-grass-field-empty-background.jpg?s=612x612&w=0&k=20&c=7_xvbjhsdn8HrOIJwqc369Dk34ynkt6gB_EAU4Q-1Ds="
       },
       "selectedDate": "2024-10-17",
+      "selectedTimeSlot": "10:00 AM to 12:00 PM"
+    },
+    {
+      "id": "5f1b",
+      "userId": "bc36",
+      "sport": {
+        "id": "1",
+        "name": "Cricket Ground A",
+        "type": "Cricket",
+        "location": "Gachibowli",
+        "images": "https://media.istockphoto.com/id/1167866941/photo/cricket-pitch-sport-grass-field-empty-background.jpg?s=612x612&w=0&k=20&c=7_xvbjhsdn8HrOIJwqc369Dk34ynkt6gB_EAU4Q-1Ds="
+      },
+      "selectedDate": "2024-10-18",
+      "selectedTimeSlot": "12:00 PM to 14:00 PM"
+    },
+    {
+      "id": "ac1a",
+      "userId": "bc36",
+      "sport": {
+        "id": "7",
+        "name": "Swimming Madhapur",
+        "type": "Swimming",
+        "location": "Madhapur",
+        "images": "https://images.unsplash.com/photo-1558617320-e695f0d420de?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3dpbW1pbmclMjBwb29sfGVufDB8fDB8fHww"
+      },
+      "selectedDate": "2024-10-21",
       "selectedTimeSlot": "10:00 AM to 12:00 PM"
     }
   ],

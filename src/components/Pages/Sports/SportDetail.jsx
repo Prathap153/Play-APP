@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { FetchSports } from "../../apis/ApiServices";
-import { useUser } from '../UserContext';
+import { FetchSports } from "../../../apis/ApiServices";
+import { useUser } from '../../UserContext';
 import './SportDetail.css';
 
 const SportDetail = () => {

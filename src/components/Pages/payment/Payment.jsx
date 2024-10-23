@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { BookingData } from '../../apis/ApiServices'; // Import your booking function
+import { BookingData } from '../../../apis/ApiServices'; // Import your booking function
 import './Payment.css';
 
 const Payment = () => {

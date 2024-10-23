@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FetchSports } from "../../apis/ApiServices";
+import { FetchSports } from "../../../apis/ApiServices";
 import { Link } from "react-router-dom";
 import './SportsDetails.css';
 

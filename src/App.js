@@ -2,17 +2,17 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { UserProvider } from './components/UserContext';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/Navbar';
 
 // Lazy load components
-const SportsDetails = lazy(() => import('./components/sportDetails/SportsDetails'));
-const SportDetail = lazy(() => import('./components/sportDetail/SportDetail'));
-const SearchByCity = lazy(() => import('./components/search/SearchByCity'));
-const Payment = lazy(() => import('./components/payment/Payment'));
-const Login = lazy(() => import('./components/login/Login'));
-const Signup = lazy(() => import('./components/signup/Signup'));
-const Bookings = lazy(() => import('./components/bookings/Bookings'));
-const PaymentConfirmation = lazy(() => import('./components/payment/PaymentConfirmation'));
+const SportsDetails = lazy(() => import('./components/Pages/Sports/SportsDetails'));
+const SportDetail = lazy(() => import('./components/Pages/Sports/SportDetail'));
+const SearchByCity = lazy(() => import('./components/Pages/Sports/SearchByCity'));
+const Payment = lazy(() => import('./components/Pages/payment/Payment'));
+const Login = lazy(() => import('./components/Pages/Auth/Login'));
+const Signup = lazy(() => import('./components/Pages/Auth/Signup'));
+const Bookings = lazy(() => import('./components/Pages/Bookings/Bookings'));
+const PaymentConfirmation = lazy(() => import('./components/Pages/payment/PaymentConfirmation'));
 
 function App() {
   return (

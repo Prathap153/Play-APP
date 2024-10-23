@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { BookingDetails } from "../../apis/ApiServices";
-import { useUser } from "../UserContext";
+import { BookingDetails } from "../../../apis/ApiServices";
+import { useUser } from "../../UserContext";
 import './Bookings.css';
 import { useNavigate } from "react-router-dom";
 

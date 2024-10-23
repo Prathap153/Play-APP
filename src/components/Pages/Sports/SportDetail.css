@@ -77,3 +77,27 @@ button {
 }
 
 
+@media all and (max-width: 500px) {
+
+    .sport-detail-container {
+        padding: 20px;
+    }
+    
+    .detail-flex-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .image-container {
+        width: 100%; /* Full width for the image container */
+        overflow: hidden; /* Hide overflow if necessary */
+    }
+
+    .image-container img {
+        width: 100%; /* Make image take full width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    }
+
+}
